@@ -1,3 +1,7 @@
+// Force la page à revenir en haut lors du rechargement
+history.scrollRestoration = 'manual';
+window.scrollTo(0, 0);
+
 document.addEventListener('DOMContentLoaded', () => {
     const themeToggle = document.getElementById('theme-toggle');
     const burgerMenu = document.getElementById('burger-menu');
@@ -86,9 +90,10 @@ document.addEventListener('DOMContentLoaded', () => {
             lang_bm: "Bambara",
             lang_bm_level: "(Langue maternelle)",
             title_contact: "Contact",
-            contact_p: "N'hésitez pas à me contacter pour toute collaboration ou opportunité.",
-            contact_location: "Lieu:",
-            contact_license: "Permis:",
+            contact_p: "N'hésitez pas à me contacter pour toute collaboration ou opportunité. Le meilleur moyen est de m'envoyer un email directement.",
+            contact_phone: "Téléphone :",
+            contact_location: "Lieu :",
+            contact_cta: "✉️ Envoyez-moi un email",
             scroll_title: "Retour en haut",
             footer_copyright: "Tous droits réservés.",
         },
@@ -145,9 +150,10 @@ document.addEventListener('DOMContentLoaded', () => {
             lang_bm: "Bambara",
             lang_bm_level: "(Native)",
             title_contact: "Contact",
-            contact_p: "Feel free to contact me for any collaboration or opportunity.",
+            contact_p: "Feel free to contact me for any collaboration or opportunity. The best way is to send me an email directly.",
+            contact_phone: "Phone:",
             contact_location: "Location:",
-            contact_license: "License:",
+            contact_cta: "✉️ Send me an email",
             scroll_title: "Back to top",
             footer_copyright: "All rights reserved.",
         },
@@ -204,9 +210,10 @@ document.addEventListener('DOMContentLoaded', () => {
             lang_bm: "Bamanankan",
             lang_bm_level: "(Ba kan)",
             title_contact: "Waleya",
-            contact_p: "Aw kana n wele walima n kan ka baara kɛ.",
-            contact_location: "Yɔrɔ:",
-            contact_license: "Permis:",
+            contact_p: "Aw kana n wele walima n kan ka baara kɛ. Fɛɛrɛ ɲuman ye ka email ci n ma tɛrɛntɛrɛn.",
+            contact_phone: "Telefɔni :",
+            contact_location: "Yɔrɔ :",
+            contact_cta: "✉️ Email ci n ma",
             scroll_title: "Segin sanfɛ",
             footer_copyright: "Droit bɛɛ lajɛlen don.",
         },
@@ -263,9 +270,10 @@ document.addEventListener('DOMContentLoaded', () => {
             lang_bm: "البمبارا",
             lang_bm_level: "(اللغة الأم)",
             title_contact: "الاتصال",
-            contact_p: "لا تترددوا في الاتصال بي لأي تعاون أو فرصة.",
+            contact_p: "لا تترددوا في الاتصال بي لأي تعاون أو فرصة. أفضل طريقة هي إرسال بريد إلكتروني إلي مباشرة.",
+            contact_phone: "الهاتف:",
             contact_location: "المكان:",
-            contact_license: "الرخصة:",
+            contact_cta: "✉️ أرسل لي بريدًا إلكترونيًا",
             scroll_title: "العودة للأعلى",
             footer_copyright: "جميع الحقوق محفوظة.",
         }

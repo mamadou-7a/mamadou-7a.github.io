@@ -365,6 +365,52 @@ nav ul li a:hover {
     color: var(--text-muted-color);
 }
 
+/* Bouton de contact par email */
+.mail-button {
+    margin-top: 2rem;
+    animation: pulse-shadow 2s infinite;
+    /* On s'assure que le bouton ne hérite pas des animations du hero */
+    opacity: 1;
+    transform: none;
+}
+
+.other-contacts {
+    margin-top: 2rem;
+    text-align: center;
+    color: var(--text-muted-color);
+}
+
+.other-contacts p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.other-contacts svg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0; /* Empêche l'icône de rétrécir */
+}
+
+.other-contacts strong {
+    color: var(--text-color);
+    margin-right: 0.5rem;
+}
+
+.other-contacts a {
+    color: inherit; /* Le lien prend la couleur du texte parent */
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block; /* Nécessaire pour que la transformation fonctionne */
+}
+
+.other-contacts a:hover {
+    color: var(--accent-color);
+    transform: scale(1.05);
+}
+
 /* Section Langues */
 .langues-grid {
     display: grid;
@@ -561,4 +607,13 @@ html[dir="rtl"] .project-card {
 
 html[dir="rtl"] .langue-item {
     flex-direction: row-reverse;
+}
+
+html[dir="rtl"] #contact-form .cta-button {
+    align-self: flex-end;
+}
+
+html[dir="rtl"] .other-contacts strong {
+    margin-right: 0;
+    margin-left: 0.5rem;
 }
