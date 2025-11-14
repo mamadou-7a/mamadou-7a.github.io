@@ -1,0 +1,564 @@
+/* Variables de couleur pour une maintenance facile */
+:root { /* Mode Sombre (par défaut) */
+    --background-color: #121826;
+    --primary-color: #1F2937;
+    --secondary-color: #374151;
+    --accent-color: #38BDF8;
+    --text-color: #F9FAFB;
+    --text-muted-color: #9CA3AF;
+}
+
+body.light-mode { /* Mode Clair */
+    --background-color: #F9FAFB;
+    --primary-color: #FFFFFF;
+    --secondary-color: #E5E7EB;
+    --accent-color: #0284C7; /* Un bleu légèrement plus foncé pour le contraste */
+    --text-color: #1F2937;
+    --text-muted-color: #6B7280;
+}
+
+
+/* Réinitialisation et styles de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Conteneur principal */
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+h1, h2, h3 {
+    line-height: 1.2;
+    color: var(--accent-color);
+}
+
+h1 { font-size: 3rem; margin-bottom: 0.5rem; color: var(--text-color); }
+h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    position: relative;
+}
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 60px; height: 3px;
+    background-color: var(--accent-color);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+}
+h2.visible::after {
+    transform: scaleX(1);
+}
+h3 { font-size: 1.4rem; margin-bottom: 0.5rem; }
+
+p { color: var(--text-muted-color); margin-bottom: 1rem; }
+a { color: var(--accent-color); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* Header et Navigation */
+header {
+    background-color: rgba(31, 41, 55, 0.8);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    border-bottom: 1px solid var(--secondary-color);
+}
+
+nav {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav ul li a {
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.nav-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Bouton de changement de thème */
+#theme-toggle {
+    background: none;
+    border: 1px solid var(--secondary-color);
+    color: var(--text-color);
+    font-size: 1.2rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+#theme-toggle:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Sélecteur de langue */
+.lang-switcher {
+    display: flex;
+    background-color: var(--secondary-color);
+    border-radius: 20px;
+    padding: 2px;
+}
+.lang-btn {
+    background: none;
+    border: none;
+    color: var(--text-muted-color);
+    font-weight: bold;
+    padding: 0.3rem 0.7rem;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+.lang-btn.active {
+    background-color: var(--accent-color);
+    color: var(--background-color);
+}
+
+/* Bouton Burger */
+#burger-menu {
+    display: none; /* Caché par défaut sur desktop */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    position: relative;
+    z-index: 1001; /* Pour être au-dessus du menu mobile */
+}
+
+#burger-menu::before,
+#burger-menu::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--text-color);
+    transition: transform 0.3s ease, top 0.3s ease;
+}
+
+#burger-menu::before { top: 6px; }
+#burger-menu::after { top: 16px; }
+
+
+/* Section Hero (Accueil) */
+#hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 80vh;
+    gap: 2rem;
+}
+
+.hero-text { flex: 1; }
+.hero-image { flex-basis: 300px; }
+.hero-image img {
+    width: 100%;
+    border-radius: 10px;
+    border: 5px solid var(--accent-color);
+    box-shadow: 0 0 25px rgba(56, 189, 248, 0.5);
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Animation pour le texte d'accueil */
+.hero-text > * {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+.hero-text h1 { animation-delay: 0.2s; }
+.hero-text h2 { animation-delay: 0.4s; }
+.hero-text p { animation-delay: 0.6s; }
+.hero-text .cta-button { animation-delay: 0.8s; }
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--background-color);
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 1rem;
+    transition: transform 0.3s ease;
+    /* L'animation est maintenant gérée par la règle .hero-text > * */
+}
+
+.cta-button:hover {
+    text-decoration: none;
+    transform: translateY(-3px);
+}
+
+/* Style des cartes pour les sections */
+.card {
+    background-color: var(--primary-color);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    border: 1px solid var(--secondary-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Timeline pour le parcours */
+.timeline {
+    position: relative;
+    padding-left: 2rem;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: var(--accent-color);
+}
+
+.timeline-item {
+    margin-bottom: 2rem;
+    position: relative;
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.timeline-item.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -2.5rem;
+    top: 5px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: var(--accent-color);
+    border: 3px solid var(--background-color);
+}
+
+.timeline-date {
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.timeline-content ul {
+    list-style-position: inside;
+    padding-left: 5px;
+    color: var(--text-muted-color);
+}
+
+/* Grille de compétences */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+}
+
+.skill {
+    background-color: var(--secondary-color);
+    padding: 1rem;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 600;
+    transition: background-color 0.3s ease, opacity 0.5s ease, transform 0.5s ease;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.skill:hover {
+    background-color: var(--accent-color);
+    color: var(--background-color);
+}
+
+.skill.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Grille des projets */
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.project-card {
+    background-color: var(--secondary-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--accent-color);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.project-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Section Contact */
+#contact ul {
+    list-style: none;
+    padding-top: 1rem;
+}
+#contact li {
+    margin-bottom: 0.5rem;
+    color: var(--text-muted-color);
+}
+
+/* Section Langues */
+.langues-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.langue-item {
+    background-color: var(--secondary-color);
+    padding: 1rem 1.5rem;
+    border-radius: 5px;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.langue-item span {
+    color: var(--text-muted-color);
+    font-weight: 400;
+}
+
+/* Footer */
+footer {
+    padding: 2rem;
+    margin-top: 2rem;
+    border-top: 1px solid var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.social-links a {
+    color: var(--text-muted-color);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--accent-color);
+    transform: translateY(-3px);
+}
+
+.social-links svg {
+    width: 24px;
+    height: 24px;
+}
+
+.copyright {
+    text-align: center;
+    color: var(--text-muted-color);
+    font-size: 0.9rem;
+}
+
+/* Bouton de défilement vers le haut */
+#scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--accent-color);
+    color: var(--background-color);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    z-index: 99;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+#scroll-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+#scroll-to-top:hover {
+    transform: translateY(-5px);
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation pour la photo */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes pulse-shadow {
+    0% {
+        box-shadow: 0 0 0 0 rgba(56, 189, 248, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(56, 189, 248, 0);
+    }
+    100% { box-shadow: 0 0 0 0 rgba(56, 189, 248, 0); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 { font-size: 2.5rem; }
+    #hero { flex-direction: column-reverse; text-align: center; }
+    .projects-grid { grid-template-columns: 1fr; }
+
+    #burger-menu {
+        display: block; /* Affiche le burger sur mobile */
+    }
+
+    #nav-links {
+        position: fixed;
+        top: 0;
+        left: -100%; /* Commence en dehors de l'écran */
+        width: 70%;
+        height: 100vh;
+        background-color: var(--primary-color);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        transition: left 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+        padding-top: 60px;
+    }
+
+    #nav-links.active {
+        left: 0; /* Fait glisser le menu à l'écran */
+    }
+
+    /* Animation du burger en croix */
+    #burger-menu.active::before {
+        top: 11px;
+        transform: rotate(45deg);
+    }
+    #burger-menu.active::after {
+        top: 11px;
+        transform: rotate(-45deg);
+    }
+}
+
+/* Styles pour l'Arabe (RTL) */
+html[dir="rtl"] body {
+    text-align: right;
+}
+
+html[dir="rtl"] h2::after {
+    left: auto;
+    right: 0;
+    transform-origin: right;
+}
+
+html[dir="rtl"] .timeline {
+    padding-left: 0;
+    padding-right: 2rem;
+}
+
+html[dir="rtl"] .timeline::before {
+    left: auto;
+    right: 0;
+}
+
+html[dir="rtl"] .timeline-item {
+    transform: translateX(30px);
+}
+
+html[dir="rtl"] .timeline-item::before {
+    left: auto;
+    right: -2.5rem;
+}
+
+html[dir="rtl"] .project-card {
+    border-left: none;
+    border-right: 4px solid var(--accent-color);
+}
+
+html[dir="rtl"] .langue-item {
+    flex-direction: row-reverse;
+}

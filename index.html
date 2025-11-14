@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mamadou DICKO - Portfolio</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">MAMADOU DICKO.</div>
+            <ul id="nav-links">
+                <li><a href="#profil" data-key="nav_profil">Profil</a></li>
+                <li><a href="#parcours" data-key="nav_parcours">Parcours</a></li>
+                <li><a href="#competences" data-key="nav_competences">Compétences</a></li>
+                <li><a href="#projets" data-key="nav_projets">Projets</a></li>
+                <li><a href="#langues" data-key="nav_langues">Langues</a></li>
+                <li><a href="#contact" data-key="nav_contact">Contact</a></li>
+            </ul>
+            <div class="nav-controls">
+                <div class="lang-switcher">
+                    <button class="lang-btn active" data-lang="fr">FR</button>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                    <button class="lang-btn" data-lang="bm">BM</button>
+                    <button class="lang-btn" data-lang="ar">AR</button>
+                </div>
+                <button id="theme-toggle" title="Changer le thème" data-key-title="theme_toggle_title">☀️</button>
+                <button id="burger-menu" aria-label="Ouvrir le menu" data-key-aria="burger_menu_aria"></button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="hero-text">
+                <h1>MAMADOU DICKO</h1>
+                <h2 data-key="hero_subtitle">Administrateur Réseaux Junior et Développeur IA</h2>
+                <p data-key="hero_p">Spécialisé dans l’intégration de solutions connectées.</p>
+                <a href="#contact" class="cta-button" data-key="hero_cta">Me Contacter</a>
+            </div>
+            <div class="hero-image">
+                <!-- Remplace placeholder.jpg par le chemin vers ta photo -->
+                <img src="me.jpg" alt="Photo de Mamadou Dicko">
+            </div>
+        </section>
+
+        <section id="profil" class="card">
+            <h2 data-key="title_profil">Profil</h2>
+            <p data-key="profil_p">
+                Technicien réseau et développeur, spécialisé dans l’intégration de solutions connectées. Déterminé, sérieux, autonome et conscient du travail qui m'attend, je suis persuadé que je serais un élément moteur au sein de votre structure !
+            </p>
+        </section>
+
+        <section id="parcours" class="card">
+            <h2 data-key="title_parcours">Parcours & Formations</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">2024 – 2025</div>
+                    <div class="timeline-content">
+                        <h3 data-key="parcours_licence_title">Licence en Réseaux et Télécommunications</h3>
+                        <p data-key="parcours_school">Institut Supérieur des Techniques Économiques Comptable et Commerciales (INTEC SUP)</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2025</div>
+                    <div class="timeline-content">
+                        <h3 data-key="parcours_certs_title">Certificats & Formations</h3>
+                        <ul>
+                            <li data-key="parcours_cert1">Certificate of Create a Virtual Private Cloud Using AWS (en ligne)</li>
+                            <li data-key="parcours_cert2">Certificat sur la Creation d’un site web avec WordPress (en ligne)</li>
+                            <li data-key="parcours_cert3">Certificat sur Canva pour les Débutants (en ligne)</li>
+                            <li data-key="parcours_cert4">Attestation de suivi sur l’introduction à la cybersécurité, SecNum académie (en ligne, France)</li>
+                            <li data-key="parcours_cert5">Formation en Intelligence artificielle appliquée à l’IOT à Orange Digital Center</li>
+                            <li data-key="parcours_cert6">Formation à l’électronique numérique et au versioning avec Git à Orange Digital Center</li>
+                            <li data-key="parcours_cert7">Formation en création de site Web avec WordPress à Orange Digital Center</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2023 – 2024</div>
+                    <div class="timeline-content">
+                        <h3 data-key="parcours_dut_title">DUT en informatique de gestion</h3>
+                        <p data-key="parcours_school">Institut Supérieur des Techniques Économiques Comptable et Commerciales (INTEC SUP)</p>
+                    </div>
+                </div>
+                 <div class="timeline-item">
+                    <div class="timeline-date">2023</div>
+                    <div class="timeline-content">
+                        <h3 data-key="parcours_attestations_title">Attestations de formation</h3>
+                        <ul>
+                            <li data-key="parcours_attestation1">Attestation de formation en HTML et CSS (IGLOS)</li>
+                            <li data-key="parcours_attestation2">Attestation de formation à la suite bureautique Office (Institut Freedom)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2021 – 2022</div>
+                    <div class="timeline-content">
+                        <h3 data-key="parcours_bac_title">Baccalauréat en Sciences exactes</h3>
+                        <p data-key="parcours_bac_school">Lycée Mamadou Kardjigue Diakité (LMKDL)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="competences" class="card">
+            <h2 data-key="title_competences">Compétences</h2>
+            <div class="skills-grid">
+                <div class="skill" data-key="skill_admin">Administration Réseaux</div>
+                <div class="skill" data-key="skill_dev_ia">Développement IA</div>
+                <div class="skill" data-key="skill_db">Base de données</div>
+                <div class="skill" data-key="skill_iot">Intégration IoT</div>
+                <div class="skill" data-key="skill_writing">Rédaction Technique</div>
+                <div class="skill" data-key="skill_learning">Auto-apprentissage</div>
+                <div class="skill" data-key="skill_perseverance">Persévérance</div>
+                <div class="skill" data-key="skill_teamwork">Esprit d’équipe</div>
+            </div>
+        </section>
+
+        <section id="projets" class="card">
+            <h2 data-key="title_projets">Projets</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3 data-key="project1_title">CulturaScan (Projet Personnel)</h3>
+                    <p data-key="project1_p">Mise en place d’une application web contre la désinformation sur l’espace AES.</p>
+                    <!-- Ajoute un lien si le projet est en ligne -->
+                    <!-- <a href="#">Voir le projet</a> -->
+                </div>
+                <div class="project-card">
+                    <h3 data-key="project2_title">Site Statique INTEC-SUP (Projet Académique)</h3>
+                    <p data-key="project2_p">Création d’un site web statique pour l’université INTEC-SUP.</p>
+                    <!-- <a href="#">Voir le projet</a> -->
+                </div>
+            </div>
+        </section>
+
+        <section id="langues" class="card">
+            <h2 data-key="title_langues">Langues</h2>
+            <div class="langues-grid">
+                <div class="langue-item"><span data-key="lang_fr">Français</span> <span data-key="lang_fr_level">(Très bien)</span></div>
+                <div class="langue-item"><span data-key="lang_en">Anglais</span> <span data-key="lang_en_level">(Niveau scolaire)</span></div>
+                <div class="langue-item"><span data-key="lang_bm">Bambara</span> <span data-key="lang_bm_level">(Langue maternelle)</span></div>
+            </div>
+        </section>
+
+        <section id="contact" class="card">
+            <h2 data-key="title_contact">Contact</h2>
+            <p data-key="contact_p">N'hésitez pas à me contacter pour toute collaboration ou opportunité.</p>
+            <ul>
+                <li><strong>Email:</strong> <a href="mailto:mamadoudickopro@gmail.com">mamadoudickopro@gmail.com</a></li>
+                <li><strong>Téléphone:</strong> +223 75 74 17 11</li>
+                <li><strong data-key="contact_location">Lieu:</strong> Sebenicoro, Bamako</li>
+                <li><strong data-key="contact_license">Permis:</strong> Catégorie B</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <!-- Remplace '#' par les liens vers tes profils -->
+            <a href="https://www.linkedin.com/in/mamadou-dicko-aab200328" target="_blank" aria-label="LinkedIn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 2h-17A1.5 1.5 0 0 0 2 3.5v17A1.5 1.5 0 0 0 3.5 22h17a1.5 1.5 0 0 0 1.5-1.5v-17A1.5 1.5 0 0 0 20.5 2ZM8 19H5v-9h3v9Zm-1.5-10.26a1.74 1.74 0 1 1 0-3.48 1.74 1.74 0 0 1 0 3.48ZM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.62 1.62 0 0 0 13 14.19V19h-3v-9h2.9v1.3a3.11 3.11 0 0 1 2.7-1.4c1.55 0 3.36.86 3.36 3.66V19Z"></path></svg>
+            </a>
+            <a href="https://github.com/mamadou-7a" target="_blank" aria-label="GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12Z"></path></svg>
+            </a>
+            <a href="https://wa.me/22375741711" target="_blank" aria-label="WhatsApp">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.894 11.892-1.99 0-3.903-.52-5.586-1.456l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.227 1.36.195 1.871-.118.571-.355 1.758-2.16 2.031-2.96.273-.799.273-1.475.198-1.623z"></path></svg>
+            </a>
+            <a href="https://t.me/BillionaireA1" target="_blank" aria-label="Telegram">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="m21.9 3.3-1.4-.1-17.6 7.6c-1.4.5-1.4 2.5 0 3l4.8 1.5 1.5 4.8c.5 1.4 2.5 1.4 3 0l7.7-17.6c.4-.4.3-1.1-.1-1.4zM7.1 13.5l10.1-6.9-7.5 7.5-2.6-.6z"></path></svg>
+            </a>
+        </div>
+        <p class="copyright">&copy; <span id="year"></span> Mamadou DICKO. <span data-key="footer_copyright">Tous droits réservés.</span></p>
+    </footer>
+
+    <a href="#" id="scroll-to-top" title="Retour en haut" data-key-title="scroll_title">↑</a>
+
+    <script src="script.js"></script>
+</body>
+</html>
