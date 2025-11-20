@@ -195,10 +195,16 @@ nav ul li a:hover {
     align-items: center;
     justify-content: space-between;
     min-height: 80vh;
+    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne si l'espace manque */
     gap: 2rem;
 }
 
-.hero-text { flex: 1; }
+.hero-text {
+    flex: 1;
+    /* Force le conteneur de texte à pouvoir rétrécir jusqu'à 0,
+       permettant à son contenu de passer à la ligne avant de déplacer l'image. */
+    min-width: 0;
+}
 .hero-image { flex-basis: 300px; }
 .hero-image img {
     width: 100%;
@@ -214,7 +220,10 @@ nav ul li a:hover {
     transform: translateY(20px);
     animation: fadeInUp 0.6s ease-out forwards;
 }
-.hero-text h1 { animation-delay: 0.2s; }
+/* On retire l'animation fadeInUp du h2 car il aura sa propre animation */
+.hero-text h1 {
+    animation-delay: 0.2s;
+}
 .hero-text h2 { animation-delay: 0.4s; }
 .hero-text p { animation-delay: 0.6s; }
 .hero-text .cta-button { animation-delay: 0.8s; }
@@ -319,17 +328,60 @@ nav ul li a:hover {
     border-radius: 5px;
     text-align: center;
     font-weight: 600;
-    transition: background-color 0.3s ease, opacity 0.5s ease, transform 0.5s ease;
+    cursor: pointer;
+    transition: background-color 0.3s ease, opacity 0.5s ease, transform 0.5s ease, color 0.2s ease-out, box-shadow 0.2s ease-out;
     opacity: 0;
     transform: translateY(20px);
 }
 
 .skill:hover {
+    transform: translateY(-3px);
+    background-color: rgba(var(--accent-color-rgb), 0.1);
+}
+
+/* Style pour la compétence sélectionnée */
+.skill.active {
     background-color: var(--accent-color);
-    color: var(--background-color);
+    color: var(--bg-color);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(var(--accent-color-rgb), 0.3);
+}
+
+/* Style pour les icônes dans les compétences */
+.skill i {
+    margin-right: 0.7rem; /* Espace entre l'icône et le texte */
+    color: var(--accent-color); /* L'icône prend la couleur d'accentuation */
+    transition: color 0.3s ease;
+    vertical-align: middle; /* Aide à l'alignement vertical */
+}
+
+.skill.active i,
+.skill:hover i {
+    color: inherit; /* L'icône prend la couleur du parent (le fond) au survol ou quand active */
+}
+
+/* Conteneur de la description de compétence */
+#skill-description-container {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    text-align: center;
+    border: 1px solid var(--secondary-color);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    min-height: 80px; /* Hauteur minimale pour éviter les sauts de page */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .skill.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Classe pour faire apparaître la description */
+#skill-description-container.visible {
     opacity: 1;
     transform: translateY(0);
 }
@@ -528,6 +580,24 @@ footer {
         box-shadow: 0 0 0 10px rgba(56, 189, 248, 0);
     }
     100% { box-shadow: 0 0 0 0 rgba(56, 189, 248, 0); }
+}
+
+/* Animation machine à écrire pour le sous-titre */
+.hero-text h2.typewriter {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid var(--accent-color);
+    animation: blink-cursor .75s step-end infinite;
+    /* On retire l'animation par défaut pour la remplacer par le JS */
+    opacity: 1;
+    transform: none;
+    animation-delay: 0s;
+}
+
+@keyframes blink-cursor {
+    from, to { border-color: transparent; }
+    50% { border-color: var(--accent-color); }
 }
 
 /* Responsive Design */

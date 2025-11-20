@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Ajout de Font Awesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -45,7 +47,6 @@
                 <a href="#contact" class="cta-button" data-key="hero_cta">Me Contacter</a>
             </div>
             <div class="hero-image">
-                <!-- Remplace placeholder.jpg par le chemin vers ta photo -->
                 <img src="me.jpg" alt="Photo de Mamadou Dicko">
             </div>
         </section>
@@ -53,7 +54,7 @@
         <section id="profil" class="card">
             <h2 data-key="title_profil">Profil</h2>
             <p data-key="profil_p">
-                Technicien réseau et développeur, spécialisé dans l’intégration de solutions connectées. Déterminé, sérieux, autonome et conscient du travail qui m'attend, je suis persuadé que je serais un élément moteur au sein de votre structure !
+                Administrateur réseau junior et développeur IA, spécialisé dans l’intégration de solutions connectées. Déterminé, sérieux, autonome et conscient du travail qui m'attend, je suis persuadé que je serais un élément moteur au sein de votre structure !
             </p>
         </section>
 
@@ -72,6 +73,7 @@
                     <div class="timeline-content">
                         <h3 data-key="parcours_certs_title">Certificats & Formations</h3>
                         <ul>
+                            <li data-key="parcours_cert8">Certificate of Introduction to Cybersecurity Fundamentals (en ligne)</li>
                             <li data-key="parcours_cert1">Certificate of Create a Virtual Private Cloud Using AWS (en ligne)</li>
                             <li data-key="parcours_cert2">Certificat sur la Creation d’un site web avec WordPress (en ligne)</li>
                             <li data-key="parcours_cert3">Certificat sur Canva pour les Débutants (en ligne)</li>
@@ -112,14 +114,17 @@
         <section id="competences" class="card">
             <h2 data-key="title_competences">Compétences</h2>
             <div class="skills-grid">
-                <div class="skill" data-key="skill_admin">Administration Réseaux</div>
-                <div class="skill" data-key="skill_dev_ia">Développement IA</div>
-                <div class="skill" data-key="skill_db">Base de données</div>
-                <div class="skill" data-key="skill_iot">Intégration IoT</div>
-                <div class="skill" data-key="skill_writing">Rédaction Technique</div>
-                <div class="skill" data-key="skill_learning">Auto-apprentissage</div>
-                <div class="skill" data-key="skill_perseverance">Persévérance</div>
-                <div class="skill" data-key="skill_teamwork">Esprit d’équipe</div>
+                <div class="skill" data-skill-id="skill_admin"><i class="fas fa-sitemap"></i> <span data-key="skill_admin">Administration Réseaux</span></div>
+                <div class="skill" data-skill-id="skill_dev_ia"><i class="fas fa-brain"></i> <span data-key="skill_dev_ia">Développement IA</span></div>
+                <div class="skill" data-skill-id="skill_db"><i class="fas fa-database"></i> <span data-key="skill_db">Base de données</span></div>
+                <div class="skill" data-skill-id="skill_iot"><i class="fas fa-wifi"></i> <span data-key="skill_iot">Intégration IoT</span></div>
+                <div class="skill" data-skill-id="skill_writing"><i class="fas fa-file-alt"></i> <span data-key="skill_writing">Rédaction Technique</span></div>
+                <div class="skill" data-skill-id="skill_learning"><i class="fas fa-lightbulb"></i> <span data-key="skill_learning">Auto-apprentissage</span></div>
+                <div class="skill" data-skill-id="skill_perseverance"><i class="fas fa-gem"></i> <span data-key="skill_perseverance">Persévérance</span></div>
+                <div class="skill" data-skill-id="skill_teamwork"><i class="fas fa-users"></i> <span data-key="skill_teamwork">Esprit d’équipe</span></div>
+            </div>
+            <div id="skill-description-container" class="card" data-key="skill_placeholder_desc">
+                Cliquez sur une compétence pour voir sa description.
             </div>
         </section>
 

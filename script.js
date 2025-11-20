@@ -46,11 +46,11 @@ document.addEventListener('DOMContentLoaded', () => {
             nav_contact: "Contact",
             theme_toggle_title: "Changer le thème",
             burger_menu_aria: "Ouvrir le menu",
-            hero_subtitle: "Administrateur Réseaux Junior et Développeur IA",
+            hero_subtitle: "Administrateur Réseaux Junior<br>et Développeur IA",
             hero_p: "Spécialisé dans l’intégration de solutions connectées.",
             hero_cta: "Me Contacter",
             title_profil: "Profil",
-            profil_p: "Technicien réseau et développeur, spécialisé dans l’intégration de solutions connectées. Déterminé, sérieux, autonome et conscient du travail qui m'attend, je suis persuadé que je serais un élément moteur au sein de votre structure !",
+            profil_p: "Administrateur réseau junior et développeur IA, spécialisé dans l’intégration de solutions connectées. Déterminé, sérieux, autonome et conscient du travail qui m'attend, je suis persuadé que je serais un élément moteur au sein de votre structure !",
             title_parcours: "Parcours & Formations",
             parcours_certs_title: "Certificats & Formations",
             parcours_licence_title: "Licence en Réseaux et Télécommunications",
@@ -59,6 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
             parcours_cert2: "Certificat sur la Creation d’un site web avec WordPress (en ligne)",
             parcours_cert3: "Certificat sur Canva pour les Débutants (en ligne)",
             parcours_cert4: "Attestation de suivi sur l’introduction à la cybersécurité, SecNum académie (en ligne, France)",
+            parcours_cert8: "Certificate of Introduction to Cybersecurity Fundamentals (en ligne)",
             parcours_cert5: "Formation en Intelligence artificielle appliquée à l’IOT à Orange Digital Center",
             parcours_cert6: "Formation à l’électronique numérique et au versioning avec Git à Orange Digital Center",
             parcours_cert7: "Formation en création de site Web avec WordPress à Orange Digital Center",
@@ -77,6 +78,15 @@ document.addEventListener('DOMContentLoaded', () => {
             skill_learning: "Auto-apprentissage",
             skill_perseverance: "Persévérance",
             skill_teamwork: "Esprit d’équipe",
+            skill_admin_desc: "Configuration et maintenance de réseaux (TCP/IP, routage, commutation). Sécurisation des infrastructures et gestion des services.",
+            skill_dev_ia_desc: "Développement d'applications web avec IA en intégrant des fonctionnalités puissantes pour créer des expériences utilisateur enrichies.",
+            skill_db_desc: "Conception, gestion et interrogation de bases de données relationnelles pour un stockage de données efficace.",
+            skill_iot_desc: "Intégration de capteurs et d'objets connectés. Programmation de microcontrôleurs Arduino et gestion des flux de données.",
+            skill_writing_desc: "Rédaction de documentation technique claire, de rapports et de guides utilisateurs pour assurer la maintenabilité des projets.",
+            skill_learning_desc: "Capacité à acquérir rapidement de nouvelles compétences techniques et à m'adapter aux nouvelles technologies de manière autonome.",
+            skill_perseverance_desc: "Détermination à résoudre des problèmes complexes et à surmonter les obstacles techniques jusqu'à l'obtention d'un résultat fonctionnel.",
+            skill_teamwork_desc: "Collaboration efficace au sein d'une équipe, partage des connaissances et communication constructive pour atteindre les objectifs communs.",
+            skill_placeholder_desc: "Cliquez sur une compétence pour voir sa description.",
             title_projets: "Projets",
             project1_title: "CulturaScan (Projet Personnel)",
             project1_p: "Mise en place d’une application web contre la désinformation sur l’espace AES.",
@@ -106,11 +116,11 @@ document.addEventListener('DOMContentLoaded', () => {
             nav_contact: "Contact",
             theme_toggle_title: "Toggle theme",
             burger_menu_aria: "Open menu",
-            hero_subtitle: "Junior Network Administrator & AI Developer",
+            hero_subtitle: "Junior Network Administrator<br>& AI Developer",
             hero_p: "Specializing in the integration of connected solutions.",
             hero_cta: "Contact Me",
             title_profil: "Profile",
-            profil_p: "Network technician and developer, specializing in integrating connected solutions. Determined, serious, autonomous, and aware of the work ahead, I am confident I would be a driving force within your organization!",
+            profil_p: "Junior Network Administrator and AI developer, specializing in integrating connected solutions. Determined, serious, autonomous, and aware of the work ahead, I am confident I would be a driving force within your organization!",
             title_parcours: "Education & Training",
             parcours_certs_title: "Certificates & Trainings",
             parcours_licence_title: "Bachelor's Degree in Networks and Telecommunications",
@@ -119,6 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
             parcours_cert2: "Certificate on Creating a website with WordPress (online)",
             parcours_cert3: "Certificate on Canva for Beginners (online)",
             parcours_cert4: "Certificate of completion on introduction to cybersecurity, SecNum académie (online, France)",
+            parcours_cert8: "Certificate of Introduction to Cybersecurity Fundamentals (online)",
             parcours_cert5: "Training in Artificial Intelligence applied to IOT at Orange Digital Center",
             parcours_cert6: "Training in digital electronics and versioning with Git at Orange Digital Center",
             parcours_cert7: "Training in website creation with WordPress at Orange Digital Center",
@@ -137,6 +148,15 @@ document.addEventListener('DOMContentLoaded', () => {
             skill_learning: "Self-learning",
             skill_perseverance: "Perseverance",
             skill_teamwork: "Team Spirit",
+            skill_admin_desc: "Configuration and maintenance of networks (TCP/IP, routing, switching). Securing infrastructures and managing services.",
+            skill_dev_ia_desc: "Development of web applications with AI by integrating powerful features to create enriched user experiences.",
+            skill_db_desc: "Design, management, and querying of relational databases for efficient data storage.",
+            skill_iot_desc: "Integration of sensors and connected objects. Programming Arduino microcontrollers and managing data streams.",
+            skill_writing_desc: "Writing clear technical documentation, reports, and user guides to ensure project maintainability.",
+            skill_learning_desc: "Ability to quickly acquire new technical skills and adapt to new technologies autonomously.",
+            skill_perseverance_desc: "Determination to solve complex problems and overcome technical obstacles until a functional result is achieved.",
+            skill_teamwork_desc: "Effective collaboration within a team, sharing knowledge and constructive communication to achieve common goals.",
+            skill_placeholder_desc: "Click on a skill to see its description.",
             title_projets: "Projects",
             project1_title: "CulturaScan (Personal Project)",
             project1_p: "Implementation of a web application against disinformation in the AES space.",
@@ -166,11 +186,11 @@ document.addEventListener('DOMContentLoaded', () => {
             nav_contact: "Waleya",
             theme_toggle_title: "Tɛmɛsira yɛlɛma",
             burger_menu_aria: "Menu da wuli",
-            hero_subtitle: "Reso admin jɔnni ani IA Develɔpɛri",
+            hero_subtitle: "Reso admin jɔnni<br>ani IA Develɔpɛri",
             hero_p: "A ka fɛɛrɛw bɛɛ lajɛlen don.",
             hero_cta: "N wele",
             title_profil: "Jɔyɔrɔ",
-            profil_p: "Reso teknisiyɛn ani develɔpɛri, min bɛ fɛɛrɛw bɛɛ lajɛlen don. Kɔrɔtɔlen, sɔbɛ, yɛrɛmahɔrɔnyalen ani n ka baara dɔnnen, n dalen b'a la ko n bɛna kɛ fanga ye aw ka sigida kɔnɔ!",
+            profil_p: "Reso admin jɔnni ani develɔpɛri, min bɛ fɛɛrɛw bɛɛ lajɛlen don. Kɔrɔtɔlen, sɔbɛ, yɛrɛmahɔrɔnyalen ani n ka baara dɔnnen, n dalen b'a la ko n bɛna kɛ fanga ye aw ka sigida kɔnɔ!",
             title_parcours: "Taama & Kalanw",
             parcours_certs_title: "Setifikaw & Kalanw",
             parcours_licence_title: "Lisansi Réseaux et Télécommunications kɔnɔ",
@@ -179,6 +199,7 @@ document.addEventListener('DOMContentLoaded', () => {
             parcours_cert2: "Setifika WordPress ye site web dilan kan (en ligne)",
             parcours_cert3: "Setifika Canva kan a daminɛbagaw ye (en ligne)",
             parcours_cert4: "Cybersécurité daminɛ kan, SecNum académie (en ligne, France)",
+            parcours_cert8: "Introduction to Cybersecurity Fundamentals (en ligne)",
             parcours_cert5: "Kalan IOT kan Orange Digital Center la",
             parcours_cert6: "Kalan elektroniki nimeriki ani Git kan Orange Digital Center la",
             parcours_cert7: "Kalan site web dilan kan WordPress fɛ Orange Digital Center la",
@@ -197,6 +218,15 @@ document.addEventListener('DOMContentLoaded', () => {
             skill_learning: "Yɛrɛ-kalan",
             skill_perseverance: "Kɔrɔtɔli",
             skill_teamwork: "Ekipu baara",
+            skill_admin_desc: "Reso sigili ani ladonni (TCP/IP, routage, commutation). Infrastructure lakana ani servisw ladonni.",
+            skill_dev_ia_desc: "Aplikasion web dilanni ni IA ye, ka fɛɛrɛ barikamaw lajɛlen walasa ka baarakɛlaw ka ko kɛcogo nafoloma dilan.",
+            skill_db_desc: "Données base relationnelles dilanni, ladonni ani ɲinini, données maracogo ɲuman kama.",
+            skill_iot_desc: "Capteurw ani fɛnɛw bɛɛ lajɛlen don. Microcontrôleur Arduino programmasiɔn ani données taama ladonni.",
+            skill_writing_desc: "Sɛbɛnni teknikɛw, rapɔriw ani baarakɛlaw ka gidw sɛbɛnni, baara lakana kama.",
+            skill_learning_desc: "Fanga ka dɔnniya kura sɔrɔ joona ani ka yɛlɛma teknoloji kura ma yɛrɛmahɔrɔnyalen.",
+            skill_perseverance_desc: "Kɔrɔtɔli ka gɛlɛyaw ɲɛnabɔ ani ka tekniki gɛlɛyaw bɔ yen fo ka se sɔrɔ.",
+            skill_teamwork_desc: "Baara kɛcogo ɲuman ekipu kɔnɔ, dɔnniya partagi ani kumakan ɲuman ka se sɔrɔ.",
+            skill_placeholder_desc: "Dɔnniya dɔ digi a ka maana ye.",
             title_projets: "Baaraw",
             project1_title: "CulturaScan (Yɛrɛ ka baara)",
             project1_p: "Web aplikasion sigili AES yɔrɔ la nkalonko juguya kama.",
@@ -226,11 +256,11 @@ document.addEventListener('DOMContentLoaded', () => {
             nav_contact: "الاتصال",
             theme_toggle_title: "تغيير السمة",
             burger_menu_aria: "فتح القائمة",
-            hero_subtitle: "مسؤول شبكات مبتدئ ومطور ذكاء اصطناعي",
+            hero_subtitle: "مسؤول شبكات مبتدئ<br>ومطور ذكاء اصطناعي",
             hero_p: "متخصص في تكامل الحلول المتصلة.",
             hero_cta: "اتصل بي",
             title_profil: "الملف الشخصي",
-            profil_p: "فني شبكات ومطور، متخصص في تكامل الحلول المتصلة. مصمم، جاد، مستقل ومدرك للعمل الذي ينتظرني، أنا مقتنع بأنني سأكون عنصراً دافعاً داخل هيكلكم!",
+            profil_p: "مسؤول شبكات مبتدئ ومطور، متخصص في تكامل الحلول المتصلة. مصمم، جاد، مستقل ومدرك للعمل الذي ينتظرني، أنا مقتنع بأنني سأكون عنصراً دافعاً داخل هيكلكم!",
             title_parcours: "المسار والتكوين",
             parcours_certs_title: "الشهادات والتكوينات",
             parcours_licence_title: "إجازة في الشبكات والاتصالات",
@@ -239,6 +269,7 @@ document.addEventListener('DOMContentLoaded', () => {
             parcours_cert2: "شهادة في إنشاء موقع ويب باستخدام WordPress (عبر الإنترنت)",
             parcours_cert3: "شهادة في Canva للمبتدئين (عبر الإنترنت)",
             parcours_cert4: "شهادة متابعة حول مقدمة في الأمن السيبراني، SecNum académie (عبر الإنترنت، فرنسا)",
+            parcours_cert8: "مقدمة في أساسيات الأمن السيبراني (عبر الإنترنت)",
             parcours_cert5: "تدريب في الذكاء الاصطناعي المطبق على إنترنت الأشياء في Orange Digital Center",
             parcours_cert6: "تدريب في الإلكترونيات الرقمية وإدارة الإصدارات باستخدام Git في Orange Digital Center",
             parcours_cert7: "تدريب في إنشاء مواقع الويب باستخدام WordPress في Orange Digital Center",
@@ -257,6 +288,15 @@ document.addEventListener('DOMContentLoaded', () => {
             skill_learning: "التعلم الذاتي",
             skill_perseverance: "المثابرة",
             skill_teamwork: "روح الفريق",
+            skill_admin_desc: "تكوين وصيانة الشبكات (TCP/IP، التوجيه، التحويل). تأمين البنى التحتية وإدارة الخدمات.",
+            skill_dev_ia_desc: "تطوير تطبيقات الويب بالذكاء الاصطناعي عبر دمج ميزات قوية لإنشاء تجارب مستخدم غنية.",
+            skill_db_desc: "تصميم وإدارة واستعلام قواعد البيانات العلائقية لتخزين البيانات بكفاءة.",
+            skill_iot_desc: "تكامل أجهزة الاستشعار والأشياء المتصلة. برمجة المتحكمات الدقيقة Arduino وإدارة تدفقات البيانات.",
+            skill_writing_desc: "كتابة وثائق تقنية واضحة وتقارير وأدلة مستخدم لضمان صيانة المشاريع.",
+            skill_learning_desc: "القدرة على اكتساب مهارات تقنية جديدة بسرعة والتكيف مع التقنيات الجديدة بشكل مستقل.",
+            skill_perseverance_desc: "الإصرار على حل المشكلات المعقدة والتغلب على العقبات التقنية حتى تحقيق نتيجة وظيفية.",
+            skill_teamwork_desc: "التعاون الفعال ضمن فريق، ومشاركة المعرفة والتواصل البناء لتحقيق الأهداف المشتركة.",
+            skill_placeholder_desc: "انقر على مهارة لرؤية وصفها.",
             title_projets: "المشاريع",
             project1_title: "CulturaScan (مشروع شخصي)",
             project1_p: "تطبيق ويب لمكافحة التضليل الإعلامي في فضاء AES.",
@@ -316,6 +356,39 @@ document.addEventListener('DOMContentLoaded', () => {
     const skillsGrid = document.querySelector('.skills-grid');
     if (skillsGrid) skillsObserver.observe(skillsGrid);
 
+    // --- Logique de l'animation machine à écrire ---
+    let typeInterval; // Pour pouvoir arrêter l'animation en cours
+    const typewriterElement = document.querySelector('#hero h2');
+
+    function typewriter(element, text, speed = 75) {
+        // Arrêter toute animation précédente
+        if (typeInterval) clearInterval(typeInterval);
+
+        let i = 0;
+        element.innerHTML = ''; // Vider le texte
+        element.classList.add('typewriter'); // Ajouter la classe pour le curseur
+
+        typeInterval = setInterval(() => {
+            if (i >= text.length) {
+                clearInterval(typeInterval);
+                element.classList.remove('typewriter'); // Retire la classe pour faire disparaître le curseur
+                return;
+            }
+
+            // Gérer les balises HTML comme <br>
+            if (text.charAt(i) === '<') {
+                const tagEnd = text.indexOf('>', i);
+                if (tagEnd !== -1) {
+                    element.innerHTML += text.substring(i, tagEnd + 1);
+                    i = tagEnd;
+                }
+            } else {
+                element.innerHTML += text.charAt(i);
+            }
+            i++;
+        }, speed);
+    }
+
     // --- Logique de traduction ---
     const setLanguage = (lang) => {
         document.documentElement.lang = lang;
@@ -350,6 +423,12 @@ document.addEventListener('DOMContentLoaded', () => {
             el.setAttribute('aria-label', translations[lang][key]);
         });
 
+        // Relancer l'animation machine à écrire avec le nouveau texte
+        const newSubtitle = translations[lang]?.hero_subtitle;
+        if (newSubtitle && typewriterElement) {
+            typewriter(typewriterElement, newSubtitle);
+        }
+
         localStorage.setItem('language', lang);
         langBtns.forEach(btn => {
             btn.classList.toggle('active', btn.dataset.lang === lang);
@@ -364,18 +443,41 @@ document.addEventListener('DOMContentLoaded', () => {
     const savedLang = localStorage.getItem('language') || 'fr';
     setLanguage(savedLang);
 
+    // --- Logique d'affichage des descriptions de compétences ---
+    const skills = document.querySelectorAll('.skill');
+    const skillDescriptionContainer = document.getElementById('skill-description-container');
+
+    skills.forEach(skill => {
+        skill.addEventListener('click', () => {
+            // Retirer la classe 'active' de toutes les compétences
+            skills.forEach(s => s.classList.remove('active'));
+            // Ajouter la classe 'active' à la compétence cliquée
+            skill.classList.add('active');
+
+            const skillKey = skill.dataset.skillId; // On utilise le nouvel attribut
+            const descriptionKey = `${skillKey}_desc`;
+            const currentLang = localStorage.getItem('language') || 'fr';
+            const description = translations[currentLang]?.[descriptionKey];
+
+            if (description) {
+                skillDescriptionContainer.textContent = description;
+                skillDescriptionContainer.classList.add('visible');
+            }
+        });
+    });
+
+
     // Mettre à jour l'année du copyright
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Appliquer les animations multiples au bouton CTA
-    const ctaButton = document.querySelector('.cta-button');
+    // Appliquer les animations multiples au bouton CTA du hero
+    const ctaButton = document.querySelector('#hero .cta-button');
     if (ctaButton) {
         ctaButton.style.animation = 'fadeInUp 0.6s ease-out 0.8s forwards, pulse-shadow 2s 1.4s infinite';
     }
 
     // --- Bouton de défilement vers le haut ---
     const scrollToTopBtn = document.getElementById('scroll-to-top');
-
     window.addEventListener('scroll', () => {
         if (window.scrollY > 400) {
             scrollToTopBtn.classList.add('visible');
